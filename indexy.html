@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respuesta</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <article class="principal">
+        <h1 id="texto"></h1>
+    </article>
+
+    <script>
+        let n = "Luciana"
+        let a = "Guzman"
+
+        var nombreG = localStorage.getItem("dato");
+        var apellidoG = localStorage.getItem("dato1");
+
+        if (nombreG  && apellidoG) {
+            if (n === nombreG  && a=== apellidoG){
+                var h1 = document.getElementById("texto");
+                h1.textContent = "Mi amor por ti "+ nombreG + " " + apellidoG + ", no puede ser calculado, pero si pudiera darle un valor seria ∞";
+            } else { 
+                var h1 = document.getElementById("texto");
+                h1.textContent = "lo siento, pero mi amor por ti es nulo, ya que todo  mi amor le pertenece a mi Luci";}
+        }
+    </script>
+</body>
+
+</html>
