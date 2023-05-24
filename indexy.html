@@ -16,20 +16,42 @@
     </article>
 
     <script>
-        let n = "Luciana"
-        let a = "Guzman"
+        let apellidos   = [
+            "guzmán",
+            "guzman",
+            "Guzman",
+            "Guzmán",
+            "GUZMAN",
+            "GUZMÁN"
+        ];
+        let nombres = [
+            "Luciana",
+            "LUCIANA",
+            "luciana",
+        ];
 
-        var nombreG = localStorage.getItem("dato");
-        var apellidoG = localStorage.getItem("dato1");
+        var nombrex = localStorage.getItem("dato");
+        var apellidox = localStorage.getItem("dato1");
+        
+        var nombreG = nombrex;
+        var apellidoG = apellidox;
+        
+        while (nombreG.includes(" ")) {
+            nombreG = nombreG.replace(" ", "");
+        };
+
+        while (apellidoG.includes(" ")) {
+            apellidoG = apellidoG.replace(" ", "");
+        };
 
         if (nombreG  && apellidoG) {
-            if (n === nombreG  && a=== apellidoG){
+            if (nombres.includes(nombreG) && apellidos.includes(apellidoG)){
                 var h1 = document.getElementById("texto");
                 h1.textContent = "Mi amor por ti "+ nombreG + " " + apellidoG + ", no puede ser calculado, pero si pudiera darle un valor seria ∞";
             } else { 
                 var h1 = document.getElementById("texto");
                 h1.textContent = "lo siento, pero mi amor por ti es nulo, ya que todo  mi amor le pertenece a mi Luci";}
-        }
+        };
     </script>
 </body>
 
